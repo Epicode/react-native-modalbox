@@ -449,7 +449,7 @@ var ModalBox = createReactClass({
 
     if (!this.props.coverScreen) return content;
 
-    return
+    return (
       <Modal
         onRequestClose={() => {
           if (this.props.backButtonClose) {
@@ -459,7 +459,8 @@ var ModalBox = createReactClass({
         supportedOrientations={["landscape", "portrait"]} transparent visible={visible}
       >
         {content}
-      </Modal>;
+      </Modal>
+    );
   },
 
   /****************** PUBLIC METHODS **********************/
